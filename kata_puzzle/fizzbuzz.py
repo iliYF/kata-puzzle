@@ -39,23 +39,32 @@ class FizzBuzz(object):
 
         return False
 
-    def is_fizz_buzz(self, number):
-        if self.is_fizz(number) and self.is_buzz(number):
-            return True
-
-        return False
+    # def is_fizz_buzz(self, number):
+    #     if self.is_fizz(number) and self.is_buzz(number):
+    #         return True
+    #
+    #     return False
 
     def report(self, number):
-        if self.is_fizz_buzz(number):
-            return "FizzBuzz"
+        # if self.is_fizz_buzz(number):
+        #     return "FizzBuzz"
+        #
+        # if self.is_fizz(number):
+        #     return "Fizz"
+        #
+        # if self.is_buzz(number):
+        #     return "Buzz"
 
+        s = ''
         if self.is_fizz(number):
-            return "Fizz"
-
+            s += "Fizz"
         if self.is_buzz(number):
-            return "Buzz"
+            s += "Buzz"
 
-        return str(number)
+        if not s:
+            s = str(number)
+
+        return s
 
 
 def count_off(count, fizz, buzz):
